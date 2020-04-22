@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-awsboilerplatecognit-dev-111441-authRole",
+            "UnauthRoleArn": "arn:aws:iam::394125495069:role/amplify-awsboilerplatecognit-dev-111441-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::394125495069:role/amplify-awsboilerplatecognit-dev-111441-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-awsboilerplatecognit-dev-111441-deployment",
+            "UnauthRoleName": "amplify-awsboilerplatecognit-dev-111441-unauthRole",
+            "StackName": "amplify-awsboilerplatecognit-dev-111441",
+            "StackId": "arn:aws:cloudformation:us-west-2:394125495069:stack/amplify-awsboilerplatecognit-dev-111441/8b2d8380-83b0-11ea-84b7-02a1b3d9eece",
+            "AmplifyAppId": "d2o7xwi42hupds"
+        },
+        "categories": {
+            "auth": {
+                "awsboilerplatecognit703a3f40": {}
+            }
+        }
+    }
+}
