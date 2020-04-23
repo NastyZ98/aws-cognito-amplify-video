@@ -13,7 +13,7 @@
         "securityGroup": "0.0.0.0/0",
         "ingestType": "RTMP_PUSH",
         "encodingProfile": "FULL",
-        "autoStart": "YES"
+        "autoStart": "NO"
     },
     "mediaStorage": {
         "storageType": "mStore"

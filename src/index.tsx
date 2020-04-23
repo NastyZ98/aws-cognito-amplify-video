@@ -1,15 +1,58 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Authenticator } from "aws-amplify-react";
 import { GlobalStyle } from "shared/styles";
 import { Config, isAuthenticated } from "shared/utils";
 import { amplifyConfig, authenticatorConfig } from "shared/amplify.config";
-import { AuthState } from "shared/interfaces/amplify.interface";
+import { AuthState, AuthData } from "shared/interfaces/amplify.interface";
 import * as serviceWorker from "./serviceWorker";
 import App from "App";
+import {
+  CustomConfirmSignUp,
+  CustomSignIn,
+  CustomSignUp,
+  CustomForgotPassword,
+} from "shared/components/Auth";
+import { AdminView, UsersView } from "pages";
+import { Auth } from "aws-amplify";
+import awsvideoconfig from "./aws-video-exports";
+import { Logo } from "shared/components/Auth/common";
+import { isInGroup } from "shared/amplify-utils/api.utils";
+import { ToastProvider } from "react-toast-notifications";
 
-const Guard = ({ authState }: { authState?: AuthState }) => {
+interface Props {
+  authState?: AuthState;
+  authData?: AuthData;
+}
+
+const Guard = ({ authState, authData }: Props) => {
+  useEffect(() => {
+    const refreshToken = async () => {
+      try {
+        const cognitoUser = await Auth.currentAuthenticatedUser();
+        const currentSession = await Auth.currentSession();
+        cognitoUser.refreshSession(
+          currentSession.getRefreshToken(),
+          () => null
+        );
+      } catch (e) {
+        console.log("Unable to refresh Token", e);
+      }
+    };
+    if (isAuthenticated(authState || "")) {
+      refreshToken();
+    }
+  });
+
   if (isAuthenticated(authState || "")) {
+    if (isInGroup(authData || null, "admin"))
+      return (
+        <ToastProvider>
+          <AdminView />
+        </ToastProvider>
+      );
+    if (isInGroup(authData || null, "users"))
+      return <UsersView awsvideoconfig={awsvideoconfig} />;
     return <App />;
   }
   return null;
@@ -21,6 +64,30 @@ const CognitoBoilerplate = () => {
       <GlobalStyle />
       <Authenticator {...authenticatorConfig}>
         <Guard />
+        <CustomSignIn>
+          <Logo
+            src="https://camo.githubusercontent.com/a1c4be4671e634c1461fe578cca2c97c7b11e486/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f747261636b69742d7075626c69632d6172746966616374732f6769746875622d706167652f6c6f676f2e706e67"
+            alt="logo"
+          />
+        </CustomSignIn>
+        <CustomConfirmSignUp>
+          <Logo
+            src="https://camo.githubusercontent.com/a1c4be4671e634c1461fe578cca2c97c7b11e486/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f747261636b69742d7075626c69632d6172746966616374732f6769746875622d706167652f6c6f676f2e706e67"
+            alt="logo"
+          />
+        </CustomConfirmSignUp>
+        <CustomForgotPassword>
+          <Logo
+            src="https://camo.githubusercontent.com/a1c4be4671e634c1461fe578cca2c97c7b11e486/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f747261636b69742d7075626c69632d6172746966616374732f6769746875622d706167652f6c6f676f2e706e67"
+            alt="logo"
+          />
+        </CustomForgotPassword>
+        <CustomSignUp {...authenticatorConfig}>
+          <Logo
+            src="https://camo.githubusercontent.com/a1c4be4671e634c1461fe578cca2c97c7b11e486/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f747261636b69742d7075626c69632d6172746966616374732f6769746875622d706167652f6c6f676f2e706e67"
+            alt="logo"
+          />
+        </CustomSignUp>
       </Authenticator>
     </React.StrictMode>
   );
