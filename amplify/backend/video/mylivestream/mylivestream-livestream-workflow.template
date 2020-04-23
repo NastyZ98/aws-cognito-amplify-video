@@ -290,7 +290,7 @@
       "Type": "String",
       "Description": "store template and lambda package",
       "AllowedPattern" : "[a-zA-Z][a-zA-Z0-9-_]*",
-      "Default": "amplify-awsboilerplatecognit-dev-111441-deployment"
+      "Default": "amplify-amplify-video-dev-170813-deployment"
     },
 
     "pSourceFolder": {

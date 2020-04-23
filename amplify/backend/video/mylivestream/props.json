@@ -1,19 +1,19 @@
 {
     "shared": {
-        "bucket": "amplify-awsboilerplatecognit-dev-111441-deployment",
+        "bucket": "amplify-amplify-video-dev-170813-deployment",
         "resourceName": "mylivestream"
     },
     "advanced": {
         "gopSize": "1",
         "gopPerSegment": "2",
         "segsPerPlist": "3",
-        "advancedChoice": true
+        "advancedChoice": false
     },
     "mediaLive": {
         "securityGroup": "0.0.0.0/0",
         "ingestType": "RTMP_PUSH",
         "encodingProfile": "FULL",
-        "autoStart": "NO"
+        "autoStart": "YES"
     },
     "mediaStorage": {
         "storageType": "mStore"

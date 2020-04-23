@@ -1,6 +1,6 @@
 {
 	"auth": {
-		"awsboilerplatecognit703a3f40": {
+		"amplifyvideo9af75d17": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [],
@@ -12,7 +12,7 @@
 			"dependsOn": [
 				{
 					"category": "auth",
-					"resourceName": "awsboilerplatecognit703a3f40",
+					"resourceName": "amplifyvideo9af75d17",
 					"attributes": [
 						"UserPoolId",
 						"AppClientIDWeb",
@@ -24,14 +24,14 @@
 		}
 	},
 	"function": {
-		"AdminQueries6d82e5fd": {
+		"AdminQueries0a03d6af": {
 			"service": "Lambda",
 			"providerPlugin": "awscloudformation",
 			"build": true,
 			"dependsOn": [
 				{
 					"category": "auth",
-					"resourceName": "awsboilerplatecognit703a3f40",
+					"resourceName": "amplifyvideo9af75d17",
 					"attributes": [
 						"UserPoolId"
 					]
@@ -46,14 +46,14 @@
 			"dependsOn": [
 				{
 					"category": "auth",
-					"resourceName": "awsboilerplatecognit703a3f40",
+					"resourceName": "amplifyvideo9af75d17",
 					"attributes": [
 						"UserPoolId"
 					]
 				},
 				{
 					"category": "function",
-					"resourceName": "AdminQueries6d82e5fd",
+					"resourceName": "AdminQueries0a03d6af",
 					"attributes": [
 						"Arn",
 						"Name"
@@ -67,7 +67,7 @@
 			"service": "video",
 			"serviceType": "livestream",
 			"providerPlugin": "awscloudformation",
-			"sha": "1836fafec371fcab8b5ae330e3e07057f08ff9ac"
+			"sha": "ad427e71eaa618d8c1b8dbd6c0df71a26822fa5f"
 		}
 	}
 }

@@ -1,19 +1,19 @@
 {
     "dev": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-awsboilerplatecognit-dev-111441-authRole",
-            "UnauthRoleArn": "arn:aws:iam::394125495069:role/amplify-awsboilerplatecognit-dev-111441-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::394125495069:role/amplify-awsboilerplatecognit-dev-111441-authRole",
+            "AuthRoleName": "amplify-amplify-video-dev-170813-authRole",
+            "UnauthRoleArn": "arn:aws:iam::394125495069:role/amplify-amplify-video-dev-170813-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::394125495069:role/amplify-amplify-video-dev-170813-authRole",
             "Region": "us-west-2",
-            "DeploymentBucketName": "amplify-awsboilerplatecognit-dev-111441-deployment",
-            "UnauthRoleName": "amplify-awsboilerplatecognit-dev-111441-unauthRole",
-            "StackName": "amplify-awsboilerplatecognit-dev-111441",
-            "StackId": "arn:aws:cloudformation:us-west-2:394125495069:stack/amplify-awsboilerplatecognit-dev-111441/8b2d8380-83b0-11ea-84b7-02a1b3d9eece",
-            "AmplifyAppId": "d2o7xwi42hupds"
+            "DeploymentBucketName": "amplify-amplify-video-dev-170813-deployment",
+            "UnauthRoleName": "amplify-amplify-video-dev-170813-unauthRole",
+            "StackName": "amplify-amplify-video-dev-170813",
+            "StackId": "arn:aws:cloudformation:us-west-2:394125495069:stack/amplify-amplify-video-dev-170813/432f3810-8574-11ea-a7a4-028ddc441728",
+            "AmplifyAppId": "d1x0k0ag8wvubu"
         },
         "categories": {
             "auth": {
-                "awsboilerplatecognit703a3f40": {}
+                "amplifyvideo9af75d17": {}
             }
         }
     }

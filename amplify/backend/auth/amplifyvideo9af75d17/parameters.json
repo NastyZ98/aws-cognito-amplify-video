@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "awsboilerplatecognit703a3f40_identitypool_703a3f40",
+    "identityPoolName": "amplifyvideo9af75d17_identitypool_9af75d17",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "awsboi703a3f40",
-    "userPoolName": "awsboilerplatecognit703a3f40_userpool_703a3f40",
+    "resourceNameTruncated": "amplif9af75d17",
+    "userPoolName": "amplifyvideo9af75d17_userpool_9af75d17",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,9 +28,9 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "awsboi703a3f40_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "amplif9af75d17_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "resourceName": "awsboilerplatecognit703a3f40",
+    "resourceName": "amplifyvideo9af75d17",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [

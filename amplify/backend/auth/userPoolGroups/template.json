@@ -1,23 +1,23 @@
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Parameters": {
-        "authawsboilerplatecognit703a3f40UserPoolId": {
+        "authamplifyvideo9af75d17UserPoolId": {
             "Type": "String",
-            "Default": "authawsboilerplatecognit703a3f40UserPoolId"
+            "Default": "authamplifyvideo9af75d17UserPoolId"
         },
         
-        "authawsboilerplatecognit703a3f40IdentityPoolId": {
+        "authamplifyvideo9af75d17IdentityPoolId": {
             "Type": "String",
-            "Default": "authawsboilerplatecognit703a3f40IdentityPoolId"
+            "Default": "authamplifyvideo9af75d17IdentityPoolId"
         },
         
-        "authawsboilerplatecognit703a3f40AppClientID": {
+        "authamplifyvideo9af75d17AppClientID": {
             "Type": "String",
-            "Default": "authawsboilerplatecognit703a3f40AppClientID"
+            "Default": "authamplifyvideo9af75d17AppClientID"
         },
-        "authawsboilerplatecognit703a3f40AppClientIDWeb": {
+        "authamplifyvideo9af75d17AppClientIDWeb": {
             "Type": "String",
-            "Default": "authawsboilerplatecognit703a3f40AppClientIDWeb"
+            "Default": "authamplifyvideo9af75d17AppClientIDWeb"
         },
         "AuthRoleArn": {
             "Type": "String"
@@ -55,7 +55,7 @@
               },
               
               "UserPoolId" : {
-                "Ref": "authawsboilerplatecognit703a3f40UserPoolId"
+                "Ref": "authamplifyvideo9af75d17UserPoolId"
               } 
             }
         },
@@ -68,7 +68,7 @@
                         "",
                         [
                           {
-                            "Ref": "authawsboilerplatecognit703a3f40UserPoolId"
+                            "Ref": "authamplifyvideo9af75d17UserPoolId"
                           },
                           "-adminGroupRole"
                         ]
@@ -85,7 +85,7 @@
                             },
                             "Action": "sts:AssumeRoleWithWebIdentity",
                             "Condition": {
-                              "StringEquals": {"cognito-identity.amazonaws.com:aud": {"Ref":"authawsboilerplatecognit703a3f40IdentityPoolId"}},
+                              "StringEquals": {"cognito-identity.amazonaws.com:aud": {"Ref":"authamplifyvideo9af75d17IdentityPoolId"}},
                               "ForAnyValue:StringLike": {"cognito-identity.amazonaws.com:amr": "authenticated"}
                             }
                         }
@@ -109,7 +109,7 @@
               },
               
               "UserPoolId" : {
-                "Ref": "authawsboilerplatecognit703a3f40UserPoolId"
+                "Ref": "authamplifyvideo9af75d17UserPoolId"
               } 
             }
         },
@@ -122,7 +122,7 @@
                         "",
                         [
                           {
-                            "Ref": "authawsboilerplatecognit703a3f40UserPoolId"
+                            "Ref": "authamplifyvideo9af75d17UserPoolId"
                           },
                           "-usersGroupRole"
                         ]
@@ -139,7 +139,7 @@
                             },
                             "Action": "sts:AssumeRoleWithWebIdentity",
                             "Condition": {
-                              "StringEquals": {"cognito-identity.amazonaws.com:aud": {"Ref":"authawsboilerplatecognit703a3f40IdentityPoolId"}},
+                              "StringEquals": {"cognito-identity.amazonaws.com:aud": {"Ref":"authamplifyvideo9af75d17IdentityPoolId"}},
                               "ForAnyValue:StringLike": {"cognito-identity.amazonaws.com:amr": "authenticated"}
                             }
                         }
@@ -165,7 +165,7 @@
                                 "",
                                 [
                                   
-                                  "awsboilerplatecognit703a3f40",
+                                  "amplifyvideo9af75d17",
                                   "-ExecutionRole-",
                                   {
                                     "Ref": "env"
@@ -324,16 +324,16 @@
                     "Ref": "UnauthRoleArn"
                 },
                 "identityPoolId": {
-                    "Ref": "authawsboilerplatecognit703a3f40IdentityPoolId"
+                    "Ref": "authamplifyvideo9af75d17IdentityPoolId"
                 },
                 "userPoolId": {
-                    "Ref": "authawsboilerplatecognit703a3f40UserPoolId"
+                    "Ref": "authamplifyvideo9af75d17UserPoolId"
                 },
                 "appClientIDWeb": {
-                    "Ref": "authawsboilerplatecognit703a3f40AppClientIDWeb"
+                    "Ref": "authamplifyvideo9af75d17AppClientIDWeb"
                 },
                 "appClientID": {
-                    "Ref": "authawsboilerplatecognit703a3f40AppClientID"
+                    "Ref": "authamplifyvideo9af75d17AppClientID"
                 },
                 "region": {
                     "Ref": "AWS::Region"

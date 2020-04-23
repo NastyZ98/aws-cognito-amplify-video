@@ -5,9 +5,9 @@
 		"env": {
 			"Type": "String"
 		},
-		"authawsboilerplatecognit703a3f40UserPoolId": {
+		"authamplifyvideo9af75d17UserPoolId": {
 			"Type": "String",
-			"Default": "authawsboilerplatecognit703a3f40UserPoolId"
+			"Default": "authamplifyvideo9af75d17UserPoolId"
 		}
 	},
 	"Conditions": {
@@ -32,12 +32,12 @@
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"AdminQueries6d82e5fd",
+						"AdminQueries0a03d6af",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"AdminQueries6d82e5fd",
+									"AdminQueries0a03d6af",
 									"-",
 									{
 										"Ref": "env"
@@ -54,7 +54,7 @@
 						},
 						"GROUP": "admin",
 						"USERPOOL": {
-							"Ref": "authawsboilerplatecognit703a3f40UserPoolId"
+							"Ref": "authamplifyvideo9af75d17UserPoolId"
 						}
 					}
 				},
@@ -67,8 +67,8 @@
 				"Runtime": "nodejs10.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "amplify-awsboilerplatecognit-dev-111441-deployment",
-					"S3Key": "amplify-builds/AdminQueries6d82e5fd-4675394d6c354f2b6e4a-build.zip"
+					"S3Bucket": "amplify-amplify-video-dev-170813-deployment",
+					"S3Key": "amplify-builds/AdminQueries0a03d6af-64664274617962685977-build.zip"
 				}
 			}
 		},
@@ -78,12 +78,12 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"AdminQueries6d82e5fdLambdaRole",
+						"AdminQueries0a03d6afLambdaRole",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"AdminQueries6d82e5fdLambdaRole",
+									"AdminQueries0a03d6afLambdaRole",
 									"-",
 									{
 										"Ref": "env"
@@ -178,7 +178,7 @@
 										},
 										":userpool/",
 										{
-											"Ref": "authawsboilerplatecognit703a3f40UserPoolId"
+											"Ref": "authamplifyvideo9af75d17UserPoolId"
 										}
 									]
 								]
